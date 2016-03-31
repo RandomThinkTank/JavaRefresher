@@ -4,9 +4,6 @@ import java.io.IOException;
 
 public class variationsOfTheStandardForLoop {
 	/*Having a look at some of the more quirky variations of the standard for loop.
-	 * 
-	 * 
-	 * 
 	 */
 	public static void main(String[] args) throws IOException {
 		
@@ -16,12 +13,21 @@ public class variationsOfTheStandardForLoop {
 			System.out.println("i and j: " + i + " " + j);
 		}
 		
-		//using a seperate control condition outside of the control variables. Can be any
+		/*using a seperate control condition outside of the control variables. Can be any
 		//valid boolean expression.
-		System.out.println("Press 's' to stop");
+		/*System.out.println("Press 's' to stop");
 		for(i = 0; (char) System.in.read() != 's'; i++){
 			System.out.println("Pass #"+ i);
-		}
+		}*/
+		
+		//An infinite loop can be created as expected
+		//for(;;) which is broken with a break statement.
+		
+		int sum = 0;
+		//Loops with no body.
+		for(i  = 1; i <= 5; sum += i++);
+		System.out.println("Value of sum is: " +sum);
+		
 	}
 
 }
