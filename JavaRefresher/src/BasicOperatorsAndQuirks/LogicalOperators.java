@@ -16,6 +16,21 @@ public class LogicalOperators {
 		System.out.println((x ^ y) + "\t" + (!x));
 		
 		y = false;
+		System.out.print(x + "\t" + y + "\t");
+		System.out.print((x&y) + "\t" + (x|y) + "\t");
+		System.out.println((x ^ y) + "\t" + (!x));
+		
+		y = true;
+		x = false;
+		System.out.print(x + "\t" + y + "\t");
+		System.out.print((x&y) + "\t" + (x|y) + "\t");
+		System.out.println((x ^ y) + "\t" + (!x));
+		
+		y = false;
+		System.out.print(x + "\t" + y + "\t");
+		System.out.print((x&y) + "\t" + (x|y) + "\t");
+		System.out.println((x ^ y) + "\t" + (!x));
+		
 		
 	}
 
