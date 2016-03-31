@@ -1,4 +1,4 @@
-package BasicOperatorsAndQuirks;
+package basicOperatorsAndQuirks;
 
 public class LogicalOperators {
 	/*A small refresher on logical operators. Really more to test out
