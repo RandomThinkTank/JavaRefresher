@@ -17,7 +17,14 @@ public class bufferingKeyboardInput {
 		ch = (char) System.in.read();
 		
 		if(ch == answer) System.out.println("*** Right ***");
-		else System.out.println("...Sorry, your wrong.");
-	}
+		else {
+			System.out.println("...Sorry, you're ");
+			if(ch > answer) {
+				System.out.println("too high.");
+			} else {
+				System.out.println("too low.");
+			}
+			}
+		}
 
 }
