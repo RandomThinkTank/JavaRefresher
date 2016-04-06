@@ -16,6 +16,10 @@ public class stringImmutability {
 		
 		String aSubstringOfImmutableString = theImmutableString.substring(5,10);
 		
+		StringBuilder aStringBuilderObj = new StringBuilder("aStringBuilder");
+		aStringBuilderObj.setCharAt(0, 'b');
+		System.out.println(aStringBuilderObj);
+		
 		//Demonstrating immutability - taking the substring of a string does not alter the original string at all.
 		System.out.println(aSubstringOfImmutableString);
 		System.out.println(theImmutableString);
