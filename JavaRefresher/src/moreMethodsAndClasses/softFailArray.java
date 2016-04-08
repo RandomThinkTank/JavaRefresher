@@ -21,4 +21,13 @@ public class softFailArray {
 		if(index >=0 && index < length) return true;
 		return false;
 	}
+	
+	public boolean put(int index, int val) {
+		
+		if(indexOk(index)){
+			a[index] = val;
+			return true;
+		}
+		return false;
+	}
 }
