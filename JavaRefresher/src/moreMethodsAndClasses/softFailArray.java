@@ -14,7 +14,7 @@ public class softFailArray {
 	
 	public int get(int index) {
 		if(indexOk(index)) return a[index];
-		return a[index];
+		return errval;
 	}
 
 	private boolean indexOk(int index) {
