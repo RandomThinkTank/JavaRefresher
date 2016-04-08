@@ -5,13 +5,12 @@ public class accessModifiers {
 	public int beta;
 	int gamma;
 	
-	public static void main(String[] args) {
-		
-
+	void setAlpha(int a){
+		alpha = a;
 	}
 	
-	void setAlpha(int a){
-		
+	int getAlpha() {
+		return alpha;
 	}
 
 }
