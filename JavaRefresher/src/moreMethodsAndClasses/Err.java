@@ -9,7 +9,7 @@ public class Err {
 	
 	Err(String m, int s) {
 		msg = m;
-		s = severity;
+		severity = s;
 	}
 	
 }
