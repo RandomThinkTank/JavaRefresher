@@ -4,7 +4,14 @@ public class ErrInfo {
 
 	public static void main(String[] args) {
 		ErrorInfo ei = new ErrorInfo();
-		ei.getErrorInfo(2);
+		Err e;
+		
+		e = ei.getErrorInfo(3);
+		System.out.println(e.msg + " " + e.severity);
+		
+		e = ei.getErrorInfo(19);
+		System.out.println(e.msg + " " + e.severity);
+		
 	}
 
 }
