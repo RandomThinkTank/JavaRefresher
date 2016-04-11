@@ -1,10 +1,12 @@
 package moreMethodsAndClasses;
 
 public class passByValueDemo {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	/*
+	 * This method makes no change to the arguments passed in the call.
+	 */
+	void noChanges(int i, int j) {
+		i = i + j;
+		j = -j;
 	}
 
 }
