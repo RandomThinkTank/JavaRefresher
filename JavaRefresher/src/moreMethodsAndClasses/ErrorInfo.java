@@ -9,10 +9,10 @@ public class ErrorInfo {
 	};
 	
 	int severity[] = {2,2,3,4};
-	String getErrorInfo(int errorCode) {
+	Err getErrorInfo(int errorCode) {
 		if(errorCode >= 1 && errorCode < msgs.length ) {
-			return msgs[errorCode] + " Severity: " + severity[errorCode];  
+			return new Err(msgs[errorCode], severity[errorCode]);
 		}
-		return "Invalid Error Code";
+		return new Err("Invalid Error Code", 0);
 	}
 }
