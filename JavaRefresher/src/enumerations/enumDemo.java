@@ -5,22 +5,11 @@ package enumerations;
  * that enum constants are objects of the enum type and as such can have a constructor, methods etc.
  */
 
-enum Elements{
-	EARTH("Falls"), FIRE("Burns"),WIND("Blows"), WATER("Falls");
-	
-	private String action;
-	Elements(String action){
-		this.action = action;
-	}
-	
-	String getAction(){return action;}
-}
-
 public class enumDemo {
 	public static void main(String args[]){
-	Elements el;
+	elements el;
 	
-		for(Elements e: Elements.values()){
+		for(elements e: elements.values()){
 			System.out.println(e + " " + e.getAction());
 		}
 	}

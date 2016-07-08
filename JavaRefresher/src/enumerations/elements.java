@@ -1,6 +1,6 @@
 package enumerations;
 
-enum elements{
+public enum elements{
 	EARTH("Falls"), FIRE("Burns"),WIND("Blows"), WATER("Falls");
 	
 	private String action;
