@@ -26,25 +26,26 @@ public class TrafficLightSimulator implements Runnable {
 			try{
 				switch(tlc) {
 				case GREEN:
-					Thread.sleep(10000);
+					Thread.sleep(1000);
 				break;
 				case YELLOW:
-					Thread.sleep(2000);
+					Thread.sleep(200);
 				break;
 				case RED:
-					Thread.sleep(12000);
+					Thread.sleep(1200);
 				break;
 				}
 			}catch(InterruptedException ex){
 				System.out.println("Thread " + thrd.getName() + " had an exception");
 				ex.printStackTrace();
 			}
+			
 			changeColor();
 		}
 		
 	}
 
-	private void changeColor() {
+	synchronized void changeColor() {
 		switch(tlc) {
 		case RED:
 			tlc = TrafficLightColor.GREEN;
@@ -54,7 +55,6 @@ public class TrafficLightSimulator implements Runnable {
 			break;
 		case GREEN:
 			tlc = TrafficLightColor.YELLOW;
-			break;
 		}
 		
 		changed = true;
@@ -71,7 +71,8 @@ public class TrafficLightSimulator implements Runnable {
 				wait();
 			changed = false;
 		} catch(InterruptedException ex){
-			System.out.println(ex);
+			System.out.println(thrd.getName() + "exception occured when waiting for state change.");
+			ex.printStackTrace();
 		}
 	}
 	
@@ -83,6 +84,5 @@ public class TrafficLightSimulator implements Runnable {
 	synchronized void cancel(){
 		stop = true;
 	}
-
 }
 
