@@ -14,8 +14,12 @@ public class TrafficLightSimulator implements Runnable {
 		thrd.start();
 	}
 	
-	
-	
+	TrafficLightSimulator() {
+		tlc = TrafficLightColor.RED; //initialise to red.
+		thrd = new Thread(this);
+		thrd.start();
+	}
+
 	@Override
 	public void run() {
 		
