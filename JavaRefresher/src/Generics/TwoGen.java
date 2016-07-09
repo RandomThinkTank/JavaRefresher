@@ -11,8 +11,10 @@ class TwoGen<T, V> { //Notice this syntax for using two types.
 	
 	//Show types of V and T.
 	void showTypes(){
-		
+		System.out.println("Type of T is " + ob1.getClass().getName());
+		System.out.println("Type of V is " + ob2.getClass().getName());
 	}
 	
-	
+	T getOb1(){return ob1;}
+	V getOb2(){return ob2;}
 }
