@@ -19,5 +19,7 @@ public class LambdaDemo {
 	System.out.println("Reciprocal of 8 is " +myPval.getValue(8.0));
 	
 	
+	//myVal = () -> "three"; will throw an exception since String is not compatible with double.
+	//myPval = (n) -> Math.random(); will also throw an exception since there is no parameter passed.
 	}
 }
